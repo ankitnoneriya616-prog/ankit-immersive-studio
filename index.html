@@ -84,7 +84,55 @@
   .side-nav{left:10px}
 }
 
-.work-tile{min-height:110px;padding:18px;border:1px solid #ffffff1d;background:linear-gradient(135deg,#17181f,#0a0b10);display:flex;flex-direction:column;justify-content:flex-end;gap:8px;transition:transform .25s,border-color .25s}.work-tile:hover{transform:translateY(-4px);border-color:#c9a87680}.work-tile b{font-size:13px}.work-tile span{font-size:11px;color:#a8a6a2;line-height:1.5}@media(max-width:600px){.work-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.work-tile{padding:12px;min-height:100px}.work-tile b{font-size:11px}.work-tile span{font-size:10px}#about-details>div[style*="grid-template-columns:repeat(2"]{grid-template-columns:1fr!important}}</style>
+.work-tile{min-height:110px;padding:18px;border:1px solid #ffffff1d;background:linear-gradient(135deg,#17181f,#0a0b10);display:flex;flex-direction:column;justify-content:flex-end;gap:8px;transition:transform .25s,border-color .25s}.work-tile:hover{transform:translateY(-4px);border-color:#c9a87680}.work-tile b{font-size:13px}.work-tile span{font-size:11px;color:#a8a6a2;line-height:1.5}@media(max-width:600px){.work-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.work-tile{padding:12px;min-height:100px}.work-tile b{font-size:11px}.work-tile span{font-size:10px}#about-details>div[style*="grid-template-columns:repeat(2"]{grid-template-columns:1fr!important}}
+/* FINAL MOBILE-FIRST FIX — override all earlier rules */
+@media screen and (max-width: 760px) {
+  .topbar .nav { display:none !important; }
+  .topbar { left:10px !important; right:10px !important; top:9px !important; height:50px !important; min-height:50px !important; padding:0 11px !important; display:flex !important; gap:8px !important; }
+  .brand { font-size:10px !important; max-width:58% !important; line-height:1.2 !important; white-space:normal !important; }
+  .brand small { display:none !important; }
+  .project { font-size:9px !important; padding:8px 10px !important; max-width:none !important; flex-shrink:0 !important; }
+  .scene { height:100svh !important; min-height:100svh !important; overflow:hidden !important; }
+  .scene:before { background:linear-gradient(180deg,rgba(4,5,8,.72) 0%,rgba(4,5,8,.80) 42%,rgba(4,5,8,.28) 68%,rgba(4,5,8,.93) 100%) !important; }
+  .room-photo { background-position:center !important; filter:brightness(.64) saturate(.85) !important; animation:roomDrift 28s ease-in-out infinite alternate !important; }
+  .content { left:7% !important; top:13% !important; width:86% !important; max-width:none !important; transform:none !important; z-index:6 !important; }
+  .eyebrow { font-size:9px !important; margin-bottom:8px !important; }
+  .content h1 { font-size:clamp(35px,9vw,46px) !important; line-height:1 !important; max-width:100% !important; margin:0 0 9px !important; }
+  .tagline { font-size:13px !important; line-height:1.35 !important; margin:0 0 7px !important; }
+  .desc { font-size:11px !important; line-height:1.5 !important; max-width:100% !important; margin:0 !important; }
+  .cta { margin-top:12px !important; padding:10px 13px !important; font-size:10px !important; }
+  .services { margin-top:10px !important; gap:7px 11px !important; max-width:100% !important; font-size:9px !important; }
+  .workstation { right:-3% !important; bottom:13% !important; width:94vw !important; height:28% !important; max-height:230px !important; opacity:.96 !important; }
+  .monitor { border-width:3px !important; }
+  .monitor.one { left:3% !important; width:43% !important; height:52% !important; bottom:21% !important; }
+  .monitor.two { left:44% !important; width:35% !important; height:46% !important; bottom:22% !important; }
+  .tower { right:4% !important; width:12% !important; height:38% !important; bottom:19% !important; }
+  .desk { bottom:4% !important; height:16% !important; }
+  .desk-plant { display:none !important; }
+  .floating-chip { top:0 !important; right:19% !important; font-size:7px !important; padding:6px 8px !important; }
+  .side-nav { left:50% !important; top:auto !important; bottom:8px !important; transform:translateX(-50%) !important; flex-direction:row !important; gap:5px !important; z-index:12 !important; }
+  .side-nav a { width:53px !important; min-height:40px !important; padding:4px 2px !important; font-size:8px !important; border-radius:8px !important; gap:1px !important; }
+  .side-nav a .ico { font-size:13px !important; }
+  .side-nav a.active,.side-nav a:hover { transform:translateY(-2px) !important; }
+  .scroll-mark { display:none !important; }
+  .counter { right:7% !important; bottom:58px !important; font-size:8px !important; gap:7px !important; }
+  .counter .bar { width:35px !important; }
+  .footer { left:7% !important; right:28% !important; bottom:59px !important; max-width:65% !important; font-size:7px !important; line-height:1.4 !important; letter-spacing:0 !important; }
+}
+@media screen and (max-width:390px) {
+  .content { top:12% !important; }
+  .content h1 { font-size:34px !important; }
+  .tagline { font-size:12px !important; }
+  .desc { font-size:10px !important; line-height:1.45 !important; }
+  .services { font-size:8px !important; gap:6px 8px !important; }
+  .workstation { height:25% !important; bottom:13% !important; }
+  .side-nav a { width:49px !important; }
+}
+@media screen and (min-width:761px) {
+  .topbar .nav { display:flex; }
+}
+
+</style>
 </head>
 <body>
 <header class="topbar"><a class="brand" href="#editing"><span class="brand-mark">A.</span> ANKIT NONERIYA <small style="font-weight:400;letter-spacing:.04em;color:#c9a876">— AI & DIGITAL CREATIVE SPECIALIST</small></a><nav class="nav"><a href="#editing">Home</a><a href="#editing">Studios</a><a href="#ai">About</a><a href="#web">Services</a><a href="#creator">Contact</a></nav><a class="project" href="https://wa.me/919009480541?text=Hello%20Ankit%2C%20I%20would%20like%20to%20discuss%20a%20project"><span>◉</span> Start a Project ↗</a></header>
