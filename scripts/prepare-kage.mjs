@@ -92,7 +92,7 @@ for (const [from, to] of replacements) {
   html = html.split(from).join(to);
 }
 
-// Replace the large visible wordmark as well; the original scene and animation remain intact.\nhtml = html.split("KAGE").join("ANKIT");\n\n// Update document metadata without touching the scene, layout or animation code.
+// Update document metadata without touching the scene, layout or animation code.
 html = html.replace(/<title>[^<]*<\/title>/i, "<title>Ankit Noneriya — AI & Digital Creative Specialist</title>");
 html = html.replace(/<meta name="description" content="[^"]*"/i, '<meta name="description" content="Ankit Noneriya — premium website design and development, video editing, AI-powered creative work, voice and music editing, thumbnail design and content creation."');
 await writeFile(pagePath, html, "utf8");
